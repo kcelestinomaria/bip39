@@ -16,7 +16,10 @@ async function getWordsList() {
     "italian",
     "japanese",
     "korean",
-    "spanish"
+    "spanish",
+    "bahasa_indonesia",
+    "arabic",
+    "portuguese"
   ];
 
   const getter: Array<{ type: string; url: string }> = [];
