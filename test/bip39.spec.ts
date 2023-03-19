@@ -294,7 +294,7 @@ for (const lang of Object.keys(language)) {
     }
   }
 
-  const japanesPassword = "㍍ガバヴァぱばぐゞちぢ十人十色";
+  const japanesePassword = "㍍ガバヴァぱばぐゞちぢ十人十色";
   for (const [entropy, mnemonic, seed] of testData.japanese) {
     if (!validateMnemonic(mnemonic, language.japanese)) {
       console.error("validateMnemonic() failed:", mnemonic);
@@ -304,9 +304,15 @@ for (const lang of Object.keys(language)) {
       console.error("getMnemonicByEntropy() failed", mnemonic);
       process.exit(1);
     }
-    if (seed !== toSeedHex(mnemonic, japanesPassword)) {
+    if (seed !== toSeedHex(mnemonic, japanesePassword)) {
       console.error("toSeedHex() failed", mnemonic);
       process.exit(1);
     }
   }
 }
+
+/*
+TO:DO - include testData for
+ other languages i.e Arabic, Bahasa Indonesian, Chinese(Simplified & Traditional),
+French, Italian, Korean, Portuguese, and Spanish
+*/
